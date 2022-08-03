@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Words</h1>
+
+<h1>The last 5 searched words:</h1>
+<div class="card">
+  <ol>
+    <%@words.each do |word| %>
+      <li><%= link_to word.name, word_path+"/#{word.id}" %></li>
+    <%end%>
+  </ol>
+</div>
